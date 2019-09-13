@@ -1,0 +1,51 @@
+{
+    "name": "ashd-grepfold",
+    "displayName": "Grep Fold",
+    "description": "Grep Fold command",
+    "version": "1.1.0",
+    "icon": "grepfold_icon.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dakaraphi/vscode-extension-fold"
+    },
+    "publisher": "ashd",
+    "engines": {
+        "vscode": "^1.31.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*",
+        "onCommand:ashd-foldplus.grepinfile",
+        "onCommand:asdh-foldplus.toggle.indentation"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "ashd-foldplus.grepinfile",
+                "title": "Grep In File and Fold",
+                "category": "FoldOnGrep"
+            },
+            {
+                "command": "ashd-foldplus.toggle.indentation",
+                "title": "Toggle Indentation/Language Folding",
+                "category": "FoldOnGrep"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.8.1",
+        "vscode": "^1.1.5",
+        "mocha": "^2.3.3",
+        "@types/node": "^6.0.40",
+        "@types/mocha": "^2.2.32"
+    }
+}
