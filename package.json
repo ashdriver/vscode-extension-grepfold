@@ -6,7 +6,7 @@
     "icon": "grepfold_icon.png",
     "repository": {
         "type": "git",
-        "url": "https://github.com/dakaraphi/vscode-extension-fold"
+        "url": "https://github.com/ashdriver/vscode-extension-grepfold"
     },
     "publisher": "ashd",
     "engines": {
